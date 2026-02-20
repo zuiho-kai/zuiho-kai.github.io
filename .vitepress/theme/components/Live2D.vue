@@ -2,6 +2,7 @@
 import { onMounted } from 'vue'
 
 function loadCSS(href) {
+  if (document.querySelector(`link[href="${href}"]`)) return
   const link = document.createElement('link')
   link.rel = 'stylesheet'
   link.href = href
@@ -10,6 +11,7 @@ function loadCSS(href) {
 
 function loadScript(src) {
   return new Promise((resolve, reject) => {
+    if (document.querySelector(`script[src="${src}"]`)) { resolve(); return }
     const script = document.createElement('script')
     script.src = src
     script.onload = resolve
@@ -19,7 +21,7 @@ function loadScript(src) {
 }
 
 onMounted(async () => {
-  if (typeof window.Paul_Pio !== 'undefined') return
+  if (document.getElementById('pio-container')) return
 
   loadCSS('/live2d/lib/pio.css')
 
@@ -29,15 +31,19 @@ onMounted(async () => {
   await loadScript('/live2d/lib/cubism4.min.js')
   await loadScript('/live2d/lib/pio.js')
   await loadScript('/live2d/lib/pio_sdk4.js')
+
+  // pio_sdk4 监听 DOMContentLoaded 来初始化，但 SPA 里这个事件早就触发了
+  // 手动调用初始化
+  if (typeof _pio_initialize_pixi === 'function') {
+    _pio_initialize_pixi()
+  }
+
   await loadScript('/live2d/lib/load.js')
 })
 </script>
 
 <template>
-  <div class="pio-container" id="pio-container">
-    <div class="pio-action"></div>
-    <canvas id="pio"></canvas>
-  </div>
+  <div />
 </template>
 
 <style>
