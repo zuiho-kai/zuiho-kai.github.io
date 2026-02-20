@@ -21,28 +21,23 @@ function loadScript(src) {
 }
 
 onMounted(async () => {
-  if (document.getElementById('aplayer-float')) return
+  if (document.querySelector('meting-js')) return
 
-  // 先创建元素插入 DOM
-  const el = document.createElement('div')
-  el.id = 'aplayer-float'
-  el.className = 'aplayer'
-  el.style.zIndex = '100'
-  el.setAttribute('data-id', '7167563029')
-  el.setAttribute('data-server', 'netease')
-  el.setAttribute('data-type', 'playlist')
-  el.setAttribute('data-fixed', 'true')
-  el.setAttribute('data-order', 'random')
-  el.setAttribute('data-volume', '0.6')
-  el.setAttribute('data-autoplay', 'false')
-  el.setAttribute('data-preload', 'metadata')
-  el.setAttribute('data-theme', '#000000')
-  document.body.appendChild(el)
-
-  // 再加载脚本，MetingJS 加载时会扫描 DOM 并初始化
   loadCSS('https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css')
   await loadScript('https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js')
   await loadScript('https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js')
+
+  const el = document.createElement('meting-js')
+  el.setAttribute('server', 'netease')
+  el.setAttribute('type', 'playlist')
+  el.setAttribute('id', '7167563029')
+  el.setAttribute('fixed', 'true')
+  el.setAttribute('order', 'random')
+  el.setAttribute('volume', '0.6')
+  el.setAttribute('autoplay', 'false')
+  el.setAttribute('preload', 'metadata')
+  el.setAttribute('theme', '#000000')
+  document.body.appendChild(el)
 })
 </script>
 
