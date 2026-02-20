@@ -1,0 +1,28 @@
+/* 阅读进度条层级确保在最上面 */
+.reading-progress {
+  z-index: 999;
+}
+
+/* medium-zoom 覆盖层 */
+.medium-zoom-overlay {
+  z-index: 100;
+}
+.medium-zoom-image--opened {
+  z-index: 101;
+}
+
+/* Live2D 看板娘不遮挡内容 */
+#waifu {
+  z-index: 50;
+}
+
+/* 粒子背景透明度 */
+#tsparticles {
+  opacity: 0.6;
+}
+
+/* 首页 hero 区域打字机光标样式 */
+.typed-cursor {
+  color: var(--vp-c-brand-1);
+  font-weight: 300;
+}

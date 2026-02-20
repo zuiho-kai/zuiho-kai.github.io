@@ -21,6 +21,11 @@
   },
   "homepage": "https://github.com/zuiho-kai/zuiho-kai.github.io#readme",
   "devDependencies": {
-    "vitepress": "^1.6.4"
+    "@tsparticles/slim": "^3.9.1",
+    "@tsparticles/vue3": "^3.0.1",
+    "medium-zoom": "^1.1.0",
+    "typed.js": "^3.0.0",
+    "vitepress": "^1.6.4",
+    "vitepress-plugin-back-to-top": "^1.0.1"
   }
 }

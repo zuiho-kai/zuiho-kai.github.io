@@ -34,3 +34,13 @@ features:
     details: 四态徽章实时展示 Agent 状态（空闲/思考/工作/离线），行动日志 + WebSocket 广播，一目了然。
     icon: 📡
 ---
+
+<script setup>
+import TypedText from './.vitepress/theme/components/TypedText.vue'
+</script>
+
+<div style="text-align: center; padding: 2rem 0 1rem;">
+  <p style="font-size: 1.2rem; color: var(--vp-c-text-2);">
+    <TypedText :strings="['让 AI 学会赚钱花钱', '让 AI 拥有独立人格', '让 AI 自主接取悬赏', '让 AI 在城市里生活', '7 天，从零到 85% 原型']" />
+  </p>
+</div>
