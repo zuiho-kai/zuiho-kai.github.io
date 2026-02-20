@@ -21,6 +21,11 @@
   opacity: 0.6;
 }
 
+/* APlayer fixed 模式默认收起 — 配合 JS 的 MutationObserver */
+.aplayer.aplayer-fixed .aplayer-miniswitcher {
+  z-index: 1;
+}
+
 /* 首页 hero 区域打字机光标样式 */
 .typed-cursor {
   color: var(--vp-c-brand-1);
