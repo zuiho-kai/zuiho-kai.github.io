@@ -14,9 +14,9 @@ onMounted(async () => {
   const script = document.createElement('script')
   script.src = 'https://giscus.app/client.js'
   script.setAttribute('data-repo', repo)
-  script.setAttribute('data-repo-id', '')
+  script.setAttribute('data-repo-id', 'R_kgDORUyQ3g')
   script.setAttribute('data-category', 'General')
-  script.setAttribute('data-category-id', '')
+  script.setAttribute('data-category-id', 'DIC_kwDORUyQ3s4C23gn')
   script.setAttribute('data-mapping', 'pathname')
   script.setAttribute('data-strict', '0')
   script.setAttribute('data-reactions-enabled', '1')
