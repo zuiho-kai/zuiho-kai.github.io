@@ -31,7 +31,7 @@ export default defineConfig({
       ],
       '/blog/': [
         {
-          text: '开发日志',
+          text: '专题文章',
           items: [
             { text: '城市经济', link: '/blog/006-city-economy' },
             { text: 'Agent 自主行为', link: '/blog/005-autonomous-agent' },
@@ -39,6 +39,19 @@ export default defineConfig({
             { text: '记忆系统设计', link: '/blog/003-memory-system' },
             { text: '技术决策记录', link: '/blog/002-tech-decisions' },
             { text: '项目启动', link: '/blog/001-project-kickoff' }
+          ]
+        },
+        {
+          text: '每日开发日志',
+          collapsed: false,
+          items: [
+            { text: 'Day 7 — 公共记忆 + 原型评估', link: '/blog/daily/day7-0222' },
+            { text: 'Day 6 — 交易 + 上网 + 建造', link: '/blog/daily/day6-0220' },
+            { text: 'Day 5 — Tool Use 上线', link: '/blog/daily/day5-0219' },
+            { text: 'Day 4 — Agent 自主行为', link: '/blog/daily/day4-0218' },
+            { text: 'Day 3 — 城市经济闭环', link: '/blog/daily/day3-0217' },
+            { text: 'Day 2 — 记忆与经济系统', link: '/blog/daily/day2-0216' },
+            { text: 'Day 1 — 从零到能聊天', link: '/blog/daily/day1-0215' }
           ]
         }
       ]
