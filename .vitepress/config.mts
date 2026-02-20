@@ -7,14 +7,26 @@ export default defineConfig({
   themeConfig: {
     nav: [
       { text: '首页', link: '/' },
-      { text: '博客', link: '/blog/' },
+      { text: '项目介绍', link: '/guide/' },
+      { text: '开发博客', link: '/blog/' },
       { text: 'GitHub', link: 'https://github.com/zuiho-kai/bot_civ' }
     ],
     sidebar: {
+      '/guide/': [
+        {
+          text: '项目介绍',
+          items: [
+            { text: '概览', link: '/guide/' }
+          ]
+        }
+      ],
       '/blog/': [
         {
           text: '开发日志',
           items: [
+            { text: '经济系统与悬赏', link: '/blog/004-economy-bounty' },
+            { text: '记忆系统设计', link: '/blog/003-memory-system' },
+            { text: '技术决策记录', link: '/blog/002-tech-decisions' },
             { text: '项目启动', link: '/blog/001-project-kickoff' }
           ]
         }
