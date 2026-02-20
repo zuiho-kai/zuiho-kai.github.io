@@ -1,0 +1,26 @@
+{
+  "name": "zuiho-kai.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vitepress dev",
+    "build": "vitepress build",
+    "preview": "vitepress preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zuiho-kai/zuiho-kai.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/zuiho-kai/zuiho-kai.github.io/issues"
+  },
+  "homepage": "https://github.com/zuiho-kai/zuiho-kai.github.io#readme",
+  "devDependencies": {
+    "vitepress": "^1.6.4"
+  }
+}
