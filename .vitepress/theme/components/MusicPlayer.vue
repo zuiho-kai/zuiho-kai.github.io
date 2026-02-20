@@ -23,10 +23,7 @@ function loadScript(src) {
 onMounted(async () => {
   if (document.getElementById('aplayer-float')) return
 
-  loadCSS('https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css')
-  await loadScript('https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js')
-  await loadScript('https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js')
-
+  // 先创建元素插入 DOM
   const el = document.createElement('div')
   el.id = 'aplayer-float'
   el.className = 'aplayer'
@@ -41,6 +38,11 @@ onMounted(async () => {
   el.setAttribute('data-preload', 'metadata')
   el.setAttribute('data-theme', '#000000')
   document.body.appendChild(el)
+
+  // 再加载脚本，MetingJS 加载时会扫描 DOM 并初始化
+  loadCSS('https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css')
+  await loadScript('https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js')
+  await loadScript('https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js')
 })
 </script>
 
