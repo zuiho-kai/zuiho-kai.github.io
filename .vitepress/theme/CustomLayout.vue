@@ -7,6 +7,7 @@ import ReadingProgress from './components/ReadingProgress.vue'
 import Live2D from './components/Live2D.vue'
 import ImageZoom from './components/ImageZoom.vue'
 import Giscus from './components/Giscus.vue'
+import MusicPlayer from './components/MusicPlayer.vue'
 
 const { Layout } = DefaultTheme
 const route = useRoute()
@@ -28,4 +29,5 @@ const isBlogPost = computed(() => {
   <ParticlesBg id="tsparticles" />
   <Live2D />
   <ImageZoom />
+  <MusicPlayer />
 </template>
