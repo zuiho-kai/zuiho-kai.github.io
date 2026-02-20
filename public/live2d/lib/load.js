@@ -35,7 +35,7 @@ const initConfig = {
       { "selector": ".post-content a, .page-content a, .post a", "type": "link" }
     ],
   },
-  night: "toggleNightMode()",
+  night: "document.querySelector('.VPSwitch.VPSwitchAppearance')?.click()",
   model: [
     "/live2d/Diana/Diana.model3.json",
     "/live2d/Ava/Ava.model3.json",
