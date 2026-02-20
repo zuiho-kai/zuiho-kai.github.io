@@ -32,6 +32,7 @@ onMounted(async () => {
   el.setAttribute('type', 'playlist')
   el.setAttribute('id', '7167563029')
   el.setAttribute('fixed', 'true')
+  el.setAttribute('mini', 'true')
   el.setAttribute('order', 'random')
   el.setAttribute('volume', '0.6')
   el.setAttribute('autoplay', 'false')
