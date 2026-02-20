@@ -39,6 +39,19 @@ onMounted(async () => {
   el.setAttribute('preload', 'metadata')
   el.setAttribute('theme', '#000000')
   document.body.appendChild(el)
+
+  // MetingJS 的 mini 属性不一定生效，等 APlayer 渲染后手动收起
+  const observer = new MutationObserver(() => {
+    const switcher = document.querySelector('.aplayer-miniswitcher button')
+    const aplayer = document.querySelector('.aplayer-fixed')
+    if (switcher && aplayer && !aplayer.classList.contains('aplayer-narrow')) {
+      switcher.click()
+      observer.disconnect()
+    }
+  })
+  observer.observe(document.body, { childList: true, subtree: true })
+  // 10 秒后自动停止观察
+  setTimeout(() => observer.disconnect(), 10000)
 })
 </script>
 
