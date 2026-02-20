@@ -8,6 +8,7 @@ export default defineConfig({
     nav: [
       { text: '首页', link: '/' },
       { text: '项目介绍', link: '/guide/' },
+      { text: '时间线', link: '/timeline/' },
       { text: '开发博客', link: '/blog/' },
       { text: 'GitHub', link: 'https://github.com/zuiho-kai/bot_civ' }
     ],
@@ -20,10 +21,20 @@ export default defineConfig({
           ]
         }
       ],
+      '/timeline/': [
+        {
+          text: '里程碑',
+          items: [
+            { text: '时间线', link: '/timeline/' }
+          ]
+        }
+      ],
       '/blog/': [
         {
           text: '开发日志',
           items: [
+            { text: '城市经济', link: '/blog/006-city-economy' },
+            { text: 'Agent 自主行为', link: '/blog/005-autonomous-agent' },
             { text: '经济系统与悬赏', link: '/blog/004-economy-bounty' },
             { text: '记忆系统设计', link: '/blog/003-memory-system' },
             { text: '技术决策记录', link: '/blog/002-tech-decisions' },
