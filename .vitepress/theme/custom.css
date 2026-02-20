@@ -21,9 +21,13 @@
   opacity: 0.6;
 }
 
-/* APlayer fixed 模式默认收起 — 配合 JS 的 MutationObserver */
-.aplayer.aplayer-fixed .aplayer-miniswitcher {
-  z-index: 1;
+/* APlayer 三态效果：默认只露箭头，hover 露封面，点击展开 */
+.aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+  left: -66px !important;
+  transition: left 0.3s ease;
+}
+.aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+  left: 0 !important;
 }
 
 /* 首页 hero 区域打字机光标样式 */
