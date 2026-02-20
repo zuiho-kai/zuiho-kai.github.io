@@ -19,7 +19,7 @@ function loadScript(src) {
 }
 
 onMounted(async () => {
-  if (document.getElementById('pio-container')) return
+  if (typeof window.Paul_Pio !== 'undefined') return
 
   loadCSS('/live2d/lib/pio.css')
 
@@ -34,7 +34,10 @@ onMounted(async () => {
 </script>
 
 <template>
-  <div />
+  <div class="pio-container" id="pio-container">
+    <div class="pio-action"></div>
+    <canvas id="pio"></canvas>
+  </div>
 </template>
 
 <style>
