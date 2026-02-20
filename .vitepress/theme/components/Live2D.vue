@@ -38,7 +38,7 @@ onMounted(async () => {
     _pio_initialize_pixi()
   }
 
-  await loadScript('/live2d/lib/load.js')
+  await loadScript('/live2d/lib/load.js?v=2')
 })
 </script>
 
