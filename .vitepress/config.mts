@@ -45,7 +45,7 @@ export default defineConfig({
           text: '每日开发日志',
           collapsed: false,
           items: [
-            { text: 'Day 7 — 公共记忆 + 原型评估', link: '/blog/daily/day7-0222' },
+            { text: 'Day 7 — M6.2 完成：记忆摘要 + 深度人格 + 悬赏接取 + 公共记忆', link: '/blog/daily/day7-0221' },
             { text: 'Day 6 — 交易 + 上网 + 建造', link: '/blog/daily/day6-0220' },
             { text: 'Day 5 — Tool Use 上线', link: '/blog/daily/day5-0219' },
             { text: 'Day 4 — Agent 自主行为', link: '/blog/daily/day4-0218' },
