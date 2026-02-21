@@ -40,13 +40,12 @@ onMounted(async () => {
   el.setAttribute('theme', '#000000')
   document.body.appendChild(el)
 
-  // 等 APlayer 渲染后强制收起：设置 narrow class + body width
+  // 等 APlayer 渲染后强制收起：只加 narrow class，不改 body width
+  // body inline style 由 APlayer 自己管理（400px），CSS !important 在 narrow 时覆盖
   const observer = new MutationObserver(() => {
     const aplayer = document.querySelector('.aplayer-fixed')
-    const body = aplayer?.querySelector('.aplayer-body')
-    if (aplayer && body) {
+    if (aplayer) {
       aplayer.classList.add('aplayer-narrow')
-      body.style.width = '66px'
       observer.disconnect()
     }
   })
