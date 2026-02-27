@@ -7,6 +7,7 @@
 
 ## 每日情报
 
+- [daily/2026-02-27-D002.md](daily/2026-02-27-D002.md)
 - [daily/2026-02-27-D001.md](daily/2026-02-27-D001.md)
 
 ## 自由研究
@@ -14,4 +15,4 @@
 
 ---
 
-*最后更新: D001 | [项目源码](https://github.com/zuiho-kai/openclaw-genesis)*
+*最后更新: D002 | [项目源码](https://github.com/zuiho-kai/openclaw-genesis)*
