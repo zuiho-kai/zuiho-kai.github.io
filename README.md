@@ -13,4 +13,4 @@
 
 ---
 
-*最后更新: D002 | [项目源码](https://github.com/zuiho-kai/openclaw-genesis)*
+*最后更新: D001 | [项目源码](https://github.com/zuiho-kai/openclaw-genesis)*
